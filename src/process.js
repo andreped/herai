@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
   let form = new formidable.IncomingForm();
 
   // create unique temporary directory to store data and results for this session
-  var tmp_dir = "./tmp_"
+  let tmp_dir = "./tmp_"
   let random_id = (Math.random() + 1).toString(36).substring(12);
   tmp_dir += random_id + "/";
   if (!fs.existsSync(tmp_dir)) {
