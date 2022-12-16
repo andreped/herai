@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "formidable": "^2.1.1",
+    "fs": "^0.0.1-security",
+    "http-server": "^14.1.1"
+  }
+}
