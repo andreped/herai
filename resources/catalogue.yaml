@@ -1,0 +1,16 @@
+apps:
+  - id: 1
+    name: Livermask
+    author: Andre Pedersen
+    email: andre.pedersen@sintef.no
+    description: Liver and vessel segmentation on CT.
+    repository: github.com/andreped/livermask
+    page: livermask.html
+
+  - id: 2
+    name: Raidionics
+    author: David Bouget
+    email: david.bouget@sintef.no
+    description: Segmentation and analysis of menigioma on brain MRI images.
+    repository: github.com/dbouget/raidionics
+    page: raidionics.html
