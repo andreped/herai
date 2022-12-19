@@ -2,8 +2,10 @@ from flask import Flask, render_template
 import yaml
 from yaml.loader import SafeLoader
 
+
 app = Flask("SINTEF MIA Catalogue")
 APP_DICT = dict()
+
 
 @app.route("/")
 def main():
@@ -11,6 +13,7 @@ def main():
     for app in ctx['apps']:
         APP_DICT[app['name']] = app
     return render_template("catalogue.jinja2", title="Catalogue", **ctx)   # By default, Flask expects your templates in a templates/ directory
+
 
 @app.route("/application/<string:app_name>")
 def application(app_name):
@@ -31,4 +34,3 @@ def load_catalogue(catalogue_configuration_file: str='resources/catalogue.yaml')
 
 if __name__ == '__main__':
     app.run(debug=True)
-
