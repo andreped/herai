@@ -37,9 +37,11 @@ def process():
             # process
             sp.check_call(["livermask", "--input", curr_path, "--output", os.path.join(dir_name, "prediction"), "--verbose"])
 
+            # download result
+            # NOTE: This has to be returned, otherwise, the result is NOT downloaded!
             return send_from_directory(dir_name, "prediction-livermask.nii")
 
-        # return "file uploaded successfully"
+            # return "Processing finished successfully!"
 
 
 """
