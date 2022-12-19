@@ -4,16 +4,11 @@
     <div class="my-5 pt-5 container">
       <div class="row justify-content-center align-content-center">
         <div class="col-sm-6">
-          <form action="http://localhost:5000/src/services/livermask" method="post" enctype="multipart/form-data">
+          <form action="http://localhost:5000/process" method="post" enctype="multipart/form-data">
             <!-- HTML5 file upload selector-->
             <div class="row">
-              <div class="col-sm-6 d-flex justify-content-start">
-                <input type="file" name="fileupload">
-              </div>
-              <div class="col-sm-6 d-flex justify-content-end">
-                <input type="submit">
-                <!-- @TODO: After submit has been pressed, the website will hang until it is done, which is not optimal -->
-              </div>
+              <input type = "file" name = "file" />
+              <input type = "submit"/>
               <!-- @TODO: This loader should only be shown after "Submit" button is pressed. Should probably be a processing template -->
               <div class="loader"></div>
             </div>
