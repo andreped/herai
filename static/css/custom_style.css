@@ -1,5 +1,6 @@
 :root{
     --sintef-blue: #003c65;
+    --grey: #9e9e9b;
     --header_height: 128px;
 }
 
@@ -42,4 +43,15 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+.btn-primary {
+  background-color: var(--sintef-blue);
+  border-color: var(--sintef-blue);
+}
+
+.btn-secondary {
+  background-color: var(--grey);
+  border-color: var(--grey);
 }
