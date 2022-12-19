@@ -6,11 +6,24 @@
         <div class="col-sm-6">
           <form action="http://localhost:5000/process" method="post" enctype="multipart/form-data">
             <!-- HTML5 file upload selector-->
-            <div class="row justify-content-center">
-              <input type="file" name="file"/>
-              <br></br>
-              <input type="submit"/>
-              <div class="loader"></div>
+                <div class="row justify-content-center mb-3">
+                    <div class="col">
+                        <input type="file" name="file"/>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <button type="reset" class="btn btn-secondary" style="width: 100%">Clear</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary" style="width: 100%">Submit</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <div class="loader"></div>
+                    </div>
+                 </div>
             </div>
           </form>
         </div>
