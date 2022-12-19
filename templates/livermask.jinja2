@@ -1,0 +1,32 @@
+{% extends "application_template.jinja2" %}
+
+{% block app_content %}
+    <div class="my-5 pt-5 container">
+      <div class="row justify-content-center align-content-center">
+        <div class="col-sm-6">
+          <form action="http://localhost:88/process" method="post" enctype="multipart/form-data">
+            <!-- HTML5 file upload selector-->
+            <div class="row">
+              <div class="col-sm-6 d-flex justify-content-start">
+                <input type="file" name="fileupload">
+              </div>
+              <div class="col-sm-6 d-flex justify-content-end">
+                <input type="submit">
+                <!-- @TODO: After submit has been pressed, the website will hang until it is done, which is not optimal -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5 pt-5 row text-center">
+        <p>
+          Don't forget to star! <i class="fa-solid fa-star" style="color: #ffc107"></i>
+          <br>
+          <i class="fa-brands fa-github" href="https://github.com/andreped/livermask"></i>
+          <a href="https://github.com/andreped/livermask" class="link-primary">github.com/andreped/livermask</a>
+        </p>
+    </div>
+
+{% endblock %}

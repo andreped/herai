@@ -24,13 +24,19 @@
   </head>
   <body class="bg-light">
 
-    <header>
-      <div class="container">
-        <div class="text-center">
-          <h1 class="mb-3">SINTEF - Medical Image Analysis</h1>
-        </div>
-      </div>
+    <header class="sticky-top py-1 header_style">
+      <nav class="container text-center d-flex justify-content-center">
+          <div class="row">
+              <div class="col-sm">
+                <img src="static/imgs/sintef_logo.svg" style="height: 128px">
+              </div>
+              <div class="col-lg align-content-center">
+               <h1 class="mb-3" style="color: white">SINTEF - Medical Image Analysis</h1>
+              </div>
+          </div>
+      </nav>
     </header>
+    <br>
     <main>
         {% block content %}
         {% endblock %}
