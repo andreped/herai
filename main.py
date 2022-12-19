@@ -24,9 +24,22 @@ def application(app_name):
     return render_template("{}.jinja2".format(app_name.lower()), **{'app_name': app_name.capitalize()})
 
 
+@app.route("/")
+def update_processing_UI():
+    render_template("processing.jinja2", title="Processing")
+
+
+@app.route("/")
+def downloader(dir_name, name):
+    return send_from_directory(dir_name, name)
+
+
 @app.route("/process", methods=["GET", "POST"])
 def process():
     if request.method == "POST":
+        # update UI that it is processing
+        # update_processing_UI()
+
         # create temporary directory - will automatically delete when exiting context manager
         with tempfile.TemporaryDirectory() as dir_name:
             # upload
@@ -38,6 +51,7 @@ def process():
             sp.check_call(["livermask", "--input", curr_path, "--output", os.path.join(dir_name, "prediction"), "--verbose"])
 
             # download result
+            # downloader(dir_name, "prediction-livermask.nii")
             # NOTE: This has to be returned, otherwise, the result is NOT downloaded!
             return send_from_directory(dir_name, "prediction-livermask.nii")
 
