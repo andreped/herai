@@ -1,3 +1,5 @@
 *.DS_Store
 *.nii
+.vs/
+.idea/
 node_modules/
