@@ -24,31 +24,30 @@
   </head>
   <body class="bg-light">
 
-    <header class="sticky-top py-1 header_style">
+    <header class="sticky-top py-1 header-style shadow">
       <nav class="container text-center d-flex justify-content-center">
-          <div class="row">
-              <div class="col-sm">
-                <img src="static/imgs/sintef_logo.svg" style="height: 128px">
-              </div>
-              <div class="col-lg align-content-center">
-               <h1 class="mb-3" style="color: white">SINTEF - Medical Image Analysis</h1>
+          <div class="row container-fluid">
+              <div class="col d-flex justify-content-center align-items-center">
+                <a href="{{ url_for('main') }}"><img src="/static/imgs/sintef_logo.svg" style="height: 3em; padding-right: 1.0em"></a>
+                <a style="text-decoration: none" href="{{ url_for('main') }}"><h1 class="" style="color: white">SINTEF - Medical Image Analysis</h1></a>
               </div>
           </div>
       </nav>
     </header>
-    <br>
-    <main>
+
+    <main class="mt-5 mb-5">
         {% block content %}
         {% endblock %}
     </main>
 
-    <footer class="text-muted py-5">
-      <div class="container">
-        <p class="float-end mb-1">
+    <footer class="footer overflow-hidden">
+      <div class="container-fluid align-items-center">
+        <p class="float-end mb-0">
           <a href="#">Back to top</a>
         </p>
-        <p class="mb-1">SINTEF Health Research Department.</p>
-        <p class="mb-0">Disclaimer: the applications available in this platform are not intended for normal clinical use, and are not FDA nor CE approved.</p>
+        <p class="mb-0">
+            <a class="link-unstyle" href="https://www.sintef.no/en/digital/departments-new/department-of-health-research/">SINTEF Department of Health Research</a> - <strong>Disclaimer:</strong> the services available in this platform are not intended for normal clinical use, and are not FDA nor CE approved.
+        </p>
       </div>
     </footer>
 

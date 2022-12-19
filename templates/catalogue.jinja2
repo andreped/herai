@@ -2,29 +2,32 @@
 
 {% block content %}
 
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
             {% for app in apps %}
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: {{ app.name }}" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>{{ app.name }}</title>
-                <rect width="100%" height="100%" fill="var(--sintef-blue)"></rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ app.name }}</text>
-              </svg>
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: {{ app.name }}"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>{{ app.name }}</title>
+                            <rect width="100%" height="100%" fill="var(--sintef-blue)"></rect>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ app.name }}</text>
+                        </svg>
 
-              <div class="card-body">
-                <p class="card-text">{{ app.description }}</p>
-                <div class="d-flex justify-content-end align-items-center">
-                  <div class="btn-group">
-                    <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('application', app_name=app.name) }}">Go</a>
-                  </div>
+                        <div class="card-body flex-column align-items-baseline">
+                            <p class="card-text">{{ app.description }}</p>
+                            <div class="d-flex justify-content-end">
+                                <div class="btn-group">
+                                    <a class="btn btn-sm btn-outline-secondary"
+                                       href="{{ url_for('application', app_name=app.name) }}">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
             {% endfor %}
         </div>
-      </div>
+    </div>
 
 {% endblock %}
