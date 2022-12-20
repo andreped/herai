@@ -6,18 +6,24 @@
         <div class="col-sm-6">
           <form action="{{ url_for('process') }}" method="post" enctype="multipart/form-data">
             <!-- HTML5 file upload selector-->
-            <div class="row justify-content-center mb-3">
-                <div class="col">
-                    <input type="file" name="file"/>
+                <div class="row justify-content-center mb-3">
+                    <div class="col">
+                        <input type="file" name="file"/>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-6">
-                    <button type="reset" class="btn btn-secondary" style="width: 100%">Clear</button>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <button type="reset" class="btn btn-secondary" style="width: 100%">Clear</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary" style="width: 100%">Submit</button>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <button type="submit" class="btn btn-primary" style="width: 100%">Submit</button>
-                </div>
+                <div class="row mt-5">
+                    <div class="col justify-content-center d-flex">
+                        <div class="loader"></div>
+                    </div>
+                 </div>
             </div>
           </form>
         </div>

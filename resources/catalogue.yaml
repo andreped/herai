@@ -1,7 +1,7 @@
 apps:
   - id: 1
     name: Livermask
-    author: Andre Pedersen
+    author: André Pedersen
     email: andre.pedersen@sintef.no
     description: Liver and vessel segmentation on CT.
     repository: github.com/andreped/livermask
