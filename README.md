@@ -1,4 +1,7 @@
 # herai
+<p align="center">
+<img src="https://github.com/andreped/herai/releases/download/screenshot/screenshot.png" width="60%">
+</p>
 
 💻 Install
 -------
